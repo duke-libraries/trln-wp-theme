@@ -451,6 +451,10 @@ h1.tribe-events-page-title {
   background-color: #177D6E;
 }
 
+.tribe-theme-twentytwenty .tribe-common .tribe-common-c-btn:hover {
+    background-color: #C21DAC;
+}
+
 .tribe-events .tribe-events-c-ical__link {
   border: 1px solid #177D6E;
 }
@@ -462,7 +466,7 @@ h1.tribe-events-page-title {
 .tribe-events .tribe-events-c-ical__link:hover {
   border: 1px solid #C21DAC;
   background-color: #C21DAC;
-  color: #fff;
+  color: #fff !important;
 }
 
 /* News archive page */
