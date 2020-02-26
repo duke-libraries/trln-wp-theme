@@ -1,0 +1,620 @@
+/*
+ Theme Name:   Twenty Twenty TRLN
+ Description:  Custom Child Theme of Twenty Twenty
+ Author:       Michael Daul
+ Template:     twentytwenty
+ Version:      1.0.0
+*/
+
+
+
+/* Typography */
+
+body { 
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.faux-heading {
+	font-family: 'Montserrat', sans-serif;
+  line-height: 1.2;
+}
+
+@media (min-width: 1220px) {
+  h1,
+  .entry-content h1 {
+    font-size: 6.4rem;
+  }
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3 {
+  line-height: 1.2;
+}
+
+h1.entry-title, 
+h2.entry-title {
+  margin-top: 0;
+}
+
+blockquote,
+blockquote p,
+cite,
+cite p,
+.wp-block-pullquote:before {
+	font-family: 'Roboto Slab', serif;
+  color: #FF6D22 !important;
+}
+
+blockquote {
+  border-color: #FF6D22 !important;
+}
+
+.entry-content p,
+.entry-content ol,
+.entry-content ul,
+.entry-content dl,
+.entry-content dt {
+  font-family: 'Lato', sans-serif;
+}
+
+.entry-content-column h1 {
+  font-size: 5rem;
+}
+
+
+/* Nav */
+
+.primary-menu > li {
+    margin: 0.8rem 0 0 0.6rem;
+  }
+
+@media (min-width: 1100px) {
+  .primary-menu > li {
+    margin: 0.8rem 0 0 1.6rem;
+  }
+}
+
+.primary-menu > li > a {
+  color: #490E6F !important;
+  padding: 6px 12px 6px 12px;
+  text-decoration: none !important;
+}
+
+.modal-menu a {
+  color: #490E6F !important;
+}
+
+.primary-menu li.current-menu-item > a,
+.primary-menu li.current-menu-parent > a,
+.primary-menu li.current-menu-ancestor > a
+.primary-menu li.current-page-parent > a,
+.primary-menu li.current-page-ancestor > a {
+  text-decoration: none !important;
+  text-decoration-color: #fff !important;
+}
+
+.primary-menu > li.menu-item-has-children > a {
+  padding: 6px 2.5rem 6px 12px;
+}
+
+.primary-menu > li > .icon {
+  right: 3px;
+  color: #490E6F !important;
+}
+
+.primary-menu > li:hover > .icon {
+  color: #fff !important;
+}
+
+
+.primary-menu > li > a:hover {
+  color: #fff !important;
+  background-color: #490E6F !important;
+}
+
+.primary-menu a:hover {
+  text-decoration: none;
+}
+
+.primary-menu ul a:hover {
+  text-decoration: underline !important;
+  text-decoration-color: rgba(255,255,255,.7);
+}
+
+.primary-menu ul {
+  margin-top: -5px;
+  background-color: #177D6E !important;
+}
+
+.primary-menu ul::after {
+	border-bottom-color: #177D6E !important;
+}
+
+.primary-menu ul ul::after {
+  border-bottom-color: transparent !important;
+	border-left-color: #177D6E !important;
+}
+
+
+
+
+/* Search Modal */
+.search-modal-inner {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+/* Masthead */
+
+#site-header {
+  display: flex;
+  justify-content: center;
+}
+
+#site-header .header-inner {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02), 
+              0 2px 2px rgba(0, 0, 0, 0.02), 
+              0 4px 4px rgba(0, 0, 0, 0.02), 
+              0 8px 8px rgba(0, 0, 0, 0.02), 
+              0 16px 16px rgba(0, 0, 0, 0.02);
+}
+
+.header-titles-wrapper {
+  padding: 0 4.5rem;
+}
+
+.header-titles a {
+  background-image: url('images/TRLN_logo_website_header_rgb.png');
+  background-size: cover;
+  height: 70px;
+  width: 146px;
+  display: block;
+}
+
+.header-titles a.scrolled {
+  background-image: url('images/TRLN_logo_website_header_abbrev_rgb.png');
+  height: 40px;
+  width: 84px;
+}
+
+@media (min-width: 700px) {
+ 
+  .header-titles a {
+    height: 100px;
+    width: 209px;
+  }
+
+  .header-titles a.scrolled {
+    height: 50px;
+    width: 104px;
+    margin-top: 5px;
+  }
+
+  .modal-menu > li > a, .modal-menu > li > .ancestor-wrapper > a {
+    padding: 2.5rem;
+  }
+
+}
+
+.section-inner {
+  width: 100%;
+}
+
+.header-inner {
+  position: fixed;
+  background: #fff;
+  padding: 1.5rem 0;
+}
+
+.toggle-inner {
+  top: -10px;
+}
+
+button.close-nav-toggle {
+  padding: 2.5rem;
+  margin-top: 7em;
+}
+
+#site-header.scrolled button.close-nav-toggle {
+  margin-top: 0;
+}
+
+@media ( min-width: 1000px ) {
+  
+  .header-inner {
+    padding: 20px 40px 20px 40px;
+    width: 100%;
+  }
+
+  #site-header.scrolled .header-inner {
+    padding: 10px 40px 10px 40px;
+  }
+  
+  .header-titles-wrapper {
+		max-width: 30%;
+    margin-right: 0;
+	}
+
+  .toggle-inner {
+    top: 0;
+  }
+
+  .toggle-inner .toggle-text {
+    top: calc(100% - 0.5rem);
+  }
+
+  #site-header.scrolled .desktop-search-toggle {
+    top: -10px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  #site-header .header-inner,
+  #site-header.scrolled .header-inner {
+    padding-left: calc( ( 100% - 1240px) / 2 );
+    padding-right: calc( ( 100% - 1240px) / 2 );
+    max-width: 100%;
+  }
+}
+
+/* Content */
+
+#site-content a {
+  color: #177D6E;
+  text-decoration: none;
+}
+
+#site-content a:hover {
+  color: #C21DAC;
+  text-decoration: underline;
+  text-decoration-color: rgba(194, 29, 172, .25);
+}
+
+#breadcrumbs a {
+  color: #490E6F;
+}
+
+.singular .entry-header,
+#news_header.entry-header,
+body.tribe-theme-twentytwenty .entry-header {
+  /* background-color: rgba(0,0,0,.05); */
+  background-color: #F1ECF4;
+  padding: 14rem 0 4rem 0;
+}
+
+.homepage-content-wrapper {
+  /* background-color: #490E6F; */
+  color: #fff;
+  padding: 30px 0 30px 0;
+  margin-top: 60px;
+}
+
+body.home .post-inner {
+    padding-top: 2rem;
+}
+
+@media (min-width: 700px) {
+  
+  .singular .entry-header,
+  #news_header.entry-header,
+  body.tribe-theme-twentytwenty .entry-header {
+    padding: 21.5rem 0 4rem 0;
+  }
+
+  body.home .post-inner {
+      padding-top: 13rem;
+  }
+
+  .homepage-content-wrapper {
+    margin-top: 0;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .singular .entry-header,
+  #news_header.entry-header,
+  body.tribe-theme-twentytwenty .entry-header {
+    padding: 16.5rem 0 4rem 0;
+  }
+
+  body.page .entry-content-column-twitter {
+    /* width: 70%;
+    float: left; */
+  }
+
+  body.blog .entry-content-column,
+  body.single-post .entry-content-column,
+  body.single-staff .entry-content-wrapper {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+  }
+
+  body.single-staff .entry-content-wrapper {
+    width: calc(100% - 8rem - 25%) !important;
+  }
+
+  body.page .twitter-feed-column {
+    width: 25%;
+    float: right;
+  }
+
+  body.home .twitter-feed-column {
+    margin-top: 60px;
+  }
+
+} 
+
+
+/* homepage content */
+
+.home .wp-block-latest-posts {
+  font-family: 'Lato', sans-serif;
+}
+
+.home .wp-block-latest-posts__post-excerpt {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+.home p.more-button {
+  text-align: left;
+  padding-top: 6px;
+  padding-left: 20px;
+}
+
+.display_archive {
+  font-size: 21px !important;
+  font-family: 'Lato', sans-serif !important;
+}
+
+
+/* Events calendar */
+
+/* homepage events list */
+
+.home .ecs-event-list {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.home .ecs-event-list li {
+  margin: 0;
+}
+
+.home .ecs-event-list h4 {
+  font-family: 'Lato', sans-serif;
+  font-size: 21px;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+}
+
+
+
+.events-archive header.entry-header,
+.tribe-events-style-full .entry-header,
+.single-tribe_events header.entry-header {
+  display: block;
+}
+
+.tribe-events-style-full .archive-header,
+.single-tribe_events .archive-header,
+.post-type-archive-tribe_events .archive-header {
+  display: none;
+}
+
+h1.tribe-events-page-title {
+  margin-top: 0;
+}
+
+.tribe-events-schedule h2 {
+  margin: 0;
+}
+
+.single-tribe_events .tribe-events-event-meta {
+  background-color: rgba(0,0,0,.05);
+  border-color: rgba(0,0,0,.05);
+}
+
+.tribe-events-calendar tr {
+  background-color: #fff;
+}
+
+.tribe-events-tooltip h3 {
+  font-size: 20px !important;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.tribe-event-duration {
+  margin-bottom: 1em;
+}
+
+
+
+/* News archive page */
+
+body:not(.singular) main > article:first-of-type {
+    padding: 0 !important;
+}
+
+#site-content article.type-post .entry-categories,
+#site-content article.type-post .breadcrumb-wrapper {
+  display: none;
+}
+
+#site-content article.type-post h2.entry-title {
+  font-size: 5rem;
+}
+
+
+/* Newsletter in-page display */
+
+#bodyTable,
+#bodyTable table,
+#bodyTable td,
+#bodyTable *,
+#bodyTable > td,
+#bodyTable > table,
+#bodyTable > table > td,
+#bodyTable > * {
+  border: none !important;
+  margin: 0 !important;
+}
+
+#bodyTable {
+  background-color: #fff;
+}
+
+#bodyTable h1,
+#bodyTable h1 * {
+  font-size: 24px !important;
+  letter-spacing: .1 !important;
+}
+
+#bodyTable h2,
+#bodyTable h2 * {
+  font-size: 20px !important;
+  letter-spacing: .1 !important;
+}
+
+
+/* Staff Pages */
+
+.staff-member {
+  overflow: hidden;
+  margin-bottom: 4em;
+}
+
+.staff-member__image {
+  height: 300px;
+  padding: 0;
+}
+
+.staff-member__contact-info div {
+  display: inline-block;
+  margin: 0 5px 20px 0;
+}
+
+.staff-member__contact-info .fa {
+  color: #fff;
+  font-size: 20px;
+  background: #009f8b;
+  padding: 7px;
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+}
+
+.staff-member__name-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(73, 14, 111, 0.8);
+  color: #fff;
+  padding: 5px;
+}
+
+.staff-member__link:hover .staff-member__name-info {
+  background-color: rgba(30, 157, 139, 0.7);
+}
+
+.staff-member__name-info .name {
+  font-size: 27px;
+}
+
+.staff-member__name-info .position {
+    font-size: 16px;
+}
+
+article.staff .intro-text,
+article.staff .post-meta-wrapper {
+  display: none;
+}
+
+.staff-member-page__image {
+  margin-bottom: 1em;
+}
+
+.staff-member-page__image img {
+  width: 100%;
+}
+
+
+/* Footer */
+
+.footer-inner,
+#site-footer .section-inner {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 700px) {
+
+  .footer-inner,
+  #site-footer .section-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-widgets-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #site-footer .section-inner {
+    width: calc(100% - 8rem);
+  }
+
+  .footer-widgets .widget {
+    margin-top: 2.5rem;
+  }
+}
+
+.footer-nav-widgets-wrapper,
+#site-footer {
+  color: #fff !important;
+  background-color: #26282B;
+}
+
+.footer-inner a,
+.footer-widgets a {
+  color: #fff !important;
+}
+
+.footer-inner a:hover,
+.footer-widgets a:hover {
+  color: #6d6d6d !important;
+  text-decoration: underline;
+  /* text-decoration-color: rgba(194, 29, 172, .25); */
+}
+
+a.to-the-top {
+  color: #fff !important;
+  text-decoration: underline !important;
+}
+
+a.to-the-top:hover {
+  color: #6d6d6d !important;
+}
+
+
+
+body.custom-background {
+  background-color: #fff !important;
+}
+
+
+.footer-widgets-outer-wrapper {
+  padding-bottom: 20px;
+}
+
