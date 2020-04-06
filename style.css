@@ -469,6 +469,14 @@ h1.tribe-events-page-title {
   color: #fff !important;
 }
 
+h2.tribe-events-schedule__datetime,
+.tribe-events-schedule__date,
+.tribe-events-schedule__time,
+.tribe-events-schedule__separator {
+  font-family: 'Montserrat', sans-serif !important;
+  line-height: 1.2;
+}
+
 /* News archive page */
 
 body:not(.singular) main > article:first-of-type {
