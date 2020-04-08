@@ -25,6 +25,48 @@ h6,
   line-height: 1.2;
 }
 
+/* Font Families (Overrides!) ----------------------------- */
+
+.entry-content {
+	font-family: 'Lato', sans-serif;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-content cite,
+.entry-content figcaption,
+.entry-content table,
+.entry-content address,
+.entry-content .wp-caption-text,
+.entry-content .wp-block-file {
+	font-family: 'Montserrat', sans-serif;
+  line-height: 1.2;
+}
+
+@supports ( font-variation-settings: normal ) {
+
+	.entry-content h1,
+	.entry-content h2,
+	.entry-content h3,
+	.entry-content h4,
+	.entry-content h5,
+	.entry-content h6,
+	.entry-content cite,
+	.entry-content figcaption,
+	.entry-content table,
+	.entry-content address,
+	.entry-content .wp-caption-text,
+	.entry-content .wp-block-file {
+		font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+	}
+}
+
+
 @media (min-width: 1220px) {
   h1,
   .entry-content h1 {
