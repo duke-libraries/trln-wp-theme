@@ -52,6 +52,28 @@ function create_posttype() {
                 ),
         )
     );
+
+
+    register_post_type( 'banner_content',
+        array(
+            'labels' => array(
+                'name' => __( 'Banner Content' ),
+                'singular_name' => __( 'Entry' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'entries'),
+            'publicly_queryable'  => false,
+            'menu_position'       => 20,
+            'supports' => array( 
+                'title', 
+                'editor', 
+                'custom-fields', 
+                'revisions' 
+                ),
+        )
+    );
+
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );

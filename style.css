@@ -201,13 +201,77 @@ blockquote {
   justify-content: center;
 }
 
-#site-header .header-inner {
+.box-shadow {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02), 
               0 2px 2px rgba(0, 0, 0, 0.02), 
               0 4px 4px rgba(0, 0, 0, 0.02), 
               0 8px 8px rgba(0, 0, 0, 0.02), 
               0 16px 16px rgba(0, 0, 0, 0.02);
 }
+
+#banner-spacer {
+  display: block;
+  height: 37px;
+}
+
+#banner {
+  position: fixed;
+  width: 100%;
+  background-color: #ad408c;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+#banner.scrolled {
+  margin-top: 70px;
+}
+
+#banner.box-shadow {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 
+              0 2px 2px rgba(0, 0, 0, 0.08), 
+              0 4px 4px rgba(0, 0, 0, 0.08), 
+              0 8px 8px rgba(0, 0, 0, 0.08), 
+              0 16px 16px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 700px) {
+  #banner {
+    margin-top: 130px;
+  }
+
+  #banner.scrolled {
+    margin-top: 65px;
+  }
+}
+
+
+
+#banner .wp-block-group {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+#banner .wp-block-group__inner-container {
+  margin: 0;
+  color: #fff;
+  /* font-size: .75em; */
+  font-size: 18px;
+  padding: 5px;
+  text-align: center;
+}
+
+#banner .wp-block-group__inner-container a {
+  color: #fff;
+  font-weight: bold;
+}
+
+#banner .wp-block-group__inner-container a:hover {
+  color: #eee;
+  text-decoration: underline;
+}
+
+
 
 .header-titles-wrapper {
   padding: 0 4.5rem;
@@ -337,6 +401,10 @@ body.tribe-theme-twentytwenty .entry-header {
   margin-bottom: 5rem;
 }
 
+#news_header.news-banner {
+  padding-top: 17.3rem;
+}
+
 .homepage-content-wrapper {
   /* background-color: #490E6F; */
   color: #fff;
@@ -357,8 +425,12 @@ body.home .post-inner {
   }
 
   #news_header {
-  margin-bottom: 8rem;
-}
+    margin-bottom: 8rem;
+  }
+
+  #news_header.news-banner {
+    padding-top: 24.8rem;
+  }
 
   body.home .post-inner {
       padding-top: 13rem;
@@ -375,6 +447,10 @@ body.home .post-inner {
   #news_header.entry-header,
   body.tribe-theme-twentytwenty .entry-header {
     padding: 16.5rem 0 4rem 0;
+  }
+
+  #news_header.news-banner {
+    padding-top: 19.8rem;
   }
 
   body.page .entry-content-column-twitter {
