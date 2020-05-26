@@ -34,7 +34,7 @@
 
 			<!-- <div class="header-wrapper"> -->
 
-				<div class="header-inner section-inner">
+				<div class="header-inner section-inner box-shadow">
 
 					<div class="header-titles-wrapper">
 
@@ -177,6 +177,44 @@
 					</div><!-- .header-navigation-wrapper -->
 
 				</div><!-- .header-inner -->
+
+
+				<?php 
+
+				// render banner
+
+					$banner_args = array(
+						'post_type'   => 'banner_content',
+						'post_status' => 'publish',
+					);
+					
+					$banner_content = new WP_Query( $banner_args );
+
+					if ( $banner_content->have_posts() ) :
+
+						while ( $banner_content->have_posts() ) :
+
+							$banner_content->the_post();
+
+							echo '<div class="banner_content-wrapper box-shadow" id="banner">
+											<div class="entry-content">
+												<div class="wp-block-group">
+													<div class="wp-block-group__inner-container">';
+
+							printf( get_the_content() );
+
+							echo '			</div>
+												</div>
+											</div>
+										</div>';
+							
+						endwhile;
+
+						wp_reset_postdata();
+
+					endif;
+
+				?>
 
 			<!-- </div> -->
 

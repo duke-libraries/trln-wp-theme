@@ -17,9 +17,26 @@ if ( !is_front_page() ) {
 
 ?>
 
-
-
 	<header class="entry-header has-text-align-center<?php echo esc_attr( $entry_header_classes ); ?>">
+
+		<?php 
+
+			// render banner spacer
+
+				$banner_args = array(
+					'post_type'   => 'banner_content',
+					'post_status' => 'publish',
+				);
+				
+				$banner_content = new WP_Query( $banner_args );
+
+				if ( $banner_content->have_posts() ) :
+
+					echo '<div id="banner-spacer"></div>';
+
+				endif;
+
+		?>
 
 		<div class="entry-header-inner section-inner medium">
 

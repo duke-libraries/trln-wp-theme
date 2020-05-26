@@ -47,8 +47,23 @@
 							$bg_color = get_post_meta( get_the_ID(), 'background_color_hexcode', true );
 							$fg_color = get_post_meta( get_the_ID(), 'foreground_color_hexcode', true );
 
-							echo '<div class="homepage-content-wrapper" style="background-color: ' . $bg_color . '; color: ' . $fg_color . '">
-											<div class="entry-content">
+							echo '<div class="homepage-content-wrapper" style="background-color: ' . $bg_color . '; color: ' . $fg_color . '">';
+													
+							// render banner spacer
+
+								$banner_args = array(
+									'post_type'   => 'banner_content',
+									'post_status' => 'publish',
+								);
+								
+								$banner_content = new WP_Query( $banner_args );
+
+								if ( $banner_content->have_posts() ) :
+									echo '<div id="banner-spacer"></div>';
+								endif;
+											
+											
+								echo '<div class="entry-content">
 												<div class="wp-block-group">
 													<div class="wp-block-group__inner-container">';
 
