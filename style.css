@@ -538,7 +538,8 @@ a.tribe-events-c-ical__link,
   background: #177D6E !important;
 }
 
-.tribe-events .tribe-events-calendar-month__day--current .tribe-events-calendar-month__day-date-link {
+.tribe-events .tribe-events-calendar-month__day--current .tribe-events-calendar-month__day-date-link,
+.tribe-events .tribe-events-calendar-month__day--current .tribe-events-calendar-month__day-date-daynum {
   color: #fff !important;
 }
 
