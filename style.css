@@ -506,6 +506,44 @@ body.home .post-inner {
 
 /* Events calendar */
 
+
+#tribe-events-pg-template {
+  padding-top: 5rem;
+  width: calc(100% - 4rem);
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 700px) {
+  #tribe-events-pg-template {
+    padding-top: 8rem;
+    width: calc(100% - 8rem);
+  }
+}
+
+#tribe-events-pg-template a,
+#tribe-events-pg-template .tribe-common a,
+.tribe-events-calendar-month__day a,
+.tribe-events-calendar-month__calendar-event-title,
+a.tribe-events-c-ical__link,
+.tribe-common a,
+.tribe-events-c-nav__prev,
+.tribe-events-c-nav__next {
+  color: #177D6E !important;
+  text-decoration: none !important;
+}
+
+.tribe-events .tribe-events-calendar-month__day--current .tribe-events-calendar-month__day-date {
+  background: #177D6E !important;
+}
+
+.tribe-events .tribe-events-calendar-month__day--current .tribe-events-calendar-month__day-date-link {
+  color: #fff !important;
+}
+
+
+
 /* homepage events list */
 
 .home .ecs-event-list {
