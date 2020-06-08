@@ -89,14 +89,26 @@ blockquote,
 blockquote p,
 cite,
 cite p,
+.wp-block-quote p,
 .wp-block-pullquote:before {
-	font-family: 'Roboto Slab', serif;
-  color: #FF6D22 !important;
+	/* font-family: 'Roboto Slab', serif; */
+  font-family: 'Lato', sans-serif;
+  color: #CC4400 !important;
+}
+
+blockquote a,
+blockquote p a,
+cite a,
+cite p a,
+.wp-block-quote p a {
+	text-decoration: underline;
+  color: #CC4400 !important;
 }
 
 blockquote {
-  border-color: #FF6D22 !important;
+  border-color: #CC4400 !important;
 }
+
 
 .entry-content p,
 .entry-content ol,
@@ -479,6 +491,7 @@ body.home .post-inner {
   }
 
 } 
+
 
 
 /* homepage content */
