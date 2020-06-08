@@ -549,6 +549,7 @@ a.tribe-events-c-ical__link,
 
 #tribe-events-content .wp-block-quote a {
   color: #CC4400 !important;
+  text-decoration: underline !important;
 }
 
 .tribe-events .tribe-events-calendar-month__day--current .tribe-events-calendar-month__day-date {
