@@ -547,7 +547,7 @@ a.tribe-events-c-ical__link,
   text-decoration: none !important;
 }
 
-#tribe-events-pg-template .wp-blockquote a {
+#tribe-events-content .wp-block-quote a {
   color: #CC4400 !important;
 }
 
